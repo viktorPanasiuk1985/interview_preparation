@@ -39,4 +39,29 @@ public class TwoPointers {
         return i + 1;
     }
 
+
+    // 1 1 1 1 2 2 3 3 4 4 5 6 7 8
+
+    // Step 1
+    // i = 0 : 1
+    // j = 1 : 1
+
+    // 1 2 2 3
+
+    public static void removeDuplicate(int[] arr) {
+        int i = 0;
+        for (int j = 1; j < arr.length; j++) {
+            System.out.print(arr[j] + " ");
+            if (arr[i] != arr[j]) {
+                i++;
+                arr[i] = arr[j];
+                System.out.println(arr[i]);
+            }
+        }
+        while (i < arr.length - 1) {
+            i++;
+            arr[i] = 0;
+        }
+    }
+
 }
