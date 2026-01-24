@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class TwoPointers {
 
     public static void main(String[] args) {
-        int[] arr = new int[] {1,2,2,3};
+        int[] arr = new int[] {};
         removeDuplicate(arr);
         System.out.println(Arrays.toString(arr));
     }
@@ -27,6 +27,10 @@ public class TwoPointers {
     // 1 2 2 3
 
     public static int removeDuplicate(int[] arr) {
+        if (arr == null) return -1;
+        if (arr.length == 0) return 0;
+        if (arr.length == 1) return 1;
+
         int i = 0;
         for (int j = 1; j < arr.length; j++) {
             System.out.print(arr[j] + " ");
