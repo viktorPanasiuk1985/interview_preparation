@@ -33,15 +33,14 @@ public class TwoPointers {
 
         int i = 0;
         for (int j = 1; j < arr.length; j++) {
-            System.out.print(arr[j] + " ");
             if (arr[i] != arr[j]) {
                 i++;
                 arr[i] = arr[j];
-                System.out.println(arr[i]);
             }
         }
         return i + 1;
     }
+
 
 
 }
